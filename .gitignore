@@ -1,0 +1,8 @@
+node_modules
+*~
+*.diff
+.directory
+/config.json
+/*.tar.gz
+.idea
+/package-lock.json

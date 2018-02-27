@@ -5,7 +5,10 @@ import {render} from 'react-dom';
 class NavLogo extends Component {
     render() {
         return (
-            <a className="navbar-brand" href={this.props.linkTo}>{this.props.text}</a>
+            <a className="navlogo" href={this.props.linkTo}>
+                <img className="mainlogo" src={this.props.imgsrc.logo}/>
+            </a>
+
         );
     }
 }

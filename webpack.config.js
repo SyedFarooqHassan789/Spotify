@@ -23,6 +23,10 @@ var config = {
     module: {
         loaders: [
             {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                loader: "file-loader?name=/images/[name].[ext]"
+            },
+            {
                 test: /\.jsx?/,
                 include: APP_DIR,
                 exclude: /node_modules/,

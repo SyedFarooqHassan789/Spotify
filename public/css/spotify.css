@@ -65,13 +65,11 @@ body {
     vertical-align:middle;
     height: 40px;
 }
-.nav.navbar-nav{
-    margin-top: 0.5%;
-    margin-left: 58%;
+.navbar-form.navbar-left.searchbar{
+    margin-top: 1.5%;
+    margin-left: 25%;
 }
-/*.jumbotron{*/
-    /*padding-left: 10%;*/
-    /*padding-right: 10%;*/
-    /*background-color: #350C29;*/
+/*.form-group{*/
+    /*margin-top: 5%;*/
+    /*margin-left: 10%;*/
 /*}*/
-

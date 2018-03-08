@@ -5,11 +5,14 @@ var MainHeader = require("./mainheader");
 var logo = require("./../../../public/images/spotifyLogo.png");
 
 class NavigationBar extends Component {
-
     render() {
         var navbar = {};
         navbar.logo =
             {imagesrc: {logo}, linkTo: "#", text: "Spotify"};
+        navbar.searchbar = {
+            value: "Search...",
+            token: {token}
+        }
         navbar.links = [
             {linkTo: "#", text: "Premium"},
             {linkTo: "#", text: "Guide"},
@@ -25,13 +28,10 @@ class NavigationBar extends Component {
             <div>
                 <NavBar {...navbar}></NavBar>
                 <MainHeader></MainHeader>
-
-
-
             </div>
 
         )
     }
 }
 
-render(<NavigationBar/>, document.getElementById('divmainpage'));
+render(<NavigationBar token={token}/>, document.getElementById('divmainpage'));

@@ -15,8 +15,7 @@ module.exports = function authenticate(req, res, next) {
                     var token = jwt.sign(user.toJSON(), config.db.secret, {
                         expiresIn: 1440 // expires in 24 hours
                     });
-                    // return the information including token as JSON
-                    var url = req.header("origin") + "/mainpage" || '/';
+                    var url = config.getapiauth.url;
                     res.json({success: true, token: token, redir: url});
                 }
                 else {

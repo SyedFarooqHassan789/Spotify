@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {render} from "react-dom";
 var NavLogo = require("./navlogo");
 var NavMenu = require("./navmenu");
+var SearchBar = require("./searchbar")
 
 class NavigationBar extends Component {
     render() {
@@ -16,7 +17,11 @@ class NavigationBar extends Component {
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
-                        <NavLogo imgsrc={this.props.logo.imagesrc} linkTo={this.props.logo.linkTo} text={this.props.logo.text}/>
+                        <NavLogo imgsrc={this.props.logo.imagesrc} linkTo={this.props.logo.linkTo}
+                                 text={this.props.logo.text}/>
+                    </div>
+                    <div>
+                        <SearchBar inputValue={this.props.searchbar}/>
                     </div>
                     <div className="collapse navbar-collapse" id="navbar-collapse">
                         <NavMenu links={this.props.links}/>
@@ -27,4 +32,4 @@ class NavigationBar extends Component {
     }
 }
 
-module.exports = NavigationBar
+module.exports = NavigationBar;

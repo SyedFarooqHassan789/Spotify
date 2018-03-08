@@ -18,8 +18,23 @@ var configDefaults = {
     // Database
     db: {
         mongoUri: "mongodb://localhost/myappdatabase",
-        secret: 'spotifyapp'
+        secret: "spotifyapp"
     },
+
+    //Spotify Api authentication url
+    getapiauth: {
+        url: "https://accounts.spotify.com/authorize/?client_id=ae6424e4ecc84ae1af01a1c62a919939&response_type=code&redirect_uri=http://localhost:8899/mainpage&scope=user-read-private"
+    },
+    postapiauth: {
+        uri: "https://accounts.spotify.com/api/token",
+        redirect_uri: "http://localhost:8899/mainpage",
+        grant_type: "authorization_code",
+        method: "POST",
+        Authorization: "Basic " + new Buffer("ae6424e4ecc84ae1af01a1c62a919939" + ':' + "cc5d9abeaf384c9ea03f167f4d0a04c8").toString('base64'),
+        ContentType: 'application/x-www-form-urlencoded',
+        Accept: 'application/json'
+    },
+
 
     // Domain-specific overrides
     domains: {},
